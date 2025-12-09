@@ -82,14 +82,22 @@ nav ul li a:hover::after{
 
  
 
-.text-header h1{
-    font-size: 60px;
-    
-}
-.text-header h1 span{
-    color: yellow;
-    
-}
+#typing-h1 {
+            color: white;
+            font-size: 60px;
+        }
+
+        #typing-h1 span {
+            color: yellow;  /* Mishal color */
+        }
+
+        
+
+        #typing-text {
+            display: none;
+            color: white;
+            font-size: 30px;
+        }
 
 
 /* ------------------about--------------- */
@@ -390,7 +398,7 @@ nav .fas{
             margin-top: 100%;
             font-size: 16px;
     }
-    .text-header h1{
+    #typing-h1{
         font-size: 35px;
     }
     nav .fas{
