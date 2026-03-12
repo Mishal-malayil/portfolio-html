@@ -382,6 +382,41 @@ form input,form textarea{
     margin-top: 20px;
     display: block;
 }
+#tools{
+    padding:120px 0;
+    text-align:center;
+}
+
+
+
+.tools-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+    gap:40px;
+    max-width:800px;
+    margin:auto;
+    padding: 10px 10%;
+}
+
+.tool-icon{
+    width:80px;
+    padding:18px;
+    border-radius:20px;
+    background:#111827;
+    transition:0.3s ease;
+}
+.tools-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr); /* Desktop 4 columns */
+    gap:40px;
+    max-width:900px;
+    margin:auto;
+}
+.sub-titles{
+    font-size: 40px;
+    ;
+    
+}
 
 
 /* ------------------------phonesize--------------------- */
@@ -459,4 +494,33 @@ nav .fas{
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
+}
+@media (max-width:992px){
+    .tools-grid{
+        grid-template-columns:repeat(3, 1fr);
+        gap:30px;
+        
+    }
+}
+/* Mobile */
+@media (max-width:600px){
+
+    .tools-grid{
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap:20px;
+        padding:5px 25%;
+        
+    }
+
+    .tool-icon{
+        width:50px;      /* smaller icon */
+        padding:12px;
+        border-radius:15px;
+    }
+
+    .sub-title{
+        font-size:28px;
+        margin-bottom:40px;
+    }
+
 }
