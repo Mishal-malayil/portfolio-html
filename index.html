@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/263182a5a4.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <div id="header">
@@ -85,6 +87,47 @@
     </div>
 
    </div>
+
+
+<!---------------------------Tech Stack---------------------------------------> 
+<div id="Tech-stack">
+    
+<h1 class="sub-title" style="text-align: center; margin-bottom: 60px;">🛠 Tech Stack</h1>
+
+<div class="tools-grid">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="tool-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="tool-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="tool-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="tool-icon">
+
+<!-- Angular -->
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" class="tool-icon">
+
+<!-- Firebase -->
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="tool-icon">
+
+<!-- Java -->
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="tool-icon">
+
+<!-- Laravel -->
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" class="tool-icon" alt="Laravel">
+
+<!-- Python -->
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="tool-icon">
+
+<!-- Git -->
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="tool-icon">
+
+<!-- Bootstrap -->
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="tool-icon">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="tool-icon" alt="Flutter">
+</div>
+</div>
+</div>
+
+    
 <!-- --------------------------servives--------------------------- -->
 
 
@@ -270,6 +313,31 @@ typedH1.options.onComplete = function() {
 };
 </script>
 
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* ⚡ Full Section Flash Reveal */
+gsap.from(".tool-icon", {
+    scrollTrigger:{
+        trigger:"#tools",
+        start:"top 75%",
+    },
+    opacity:0,
+    scale:0.5,
+    filter:"blur(25px)",
+    duration:1,
+    ease:"power3.out"
+});
+
+/* 🌈 Continuous RGB Glow (All Together) */
+gsap.to(".tool-icon", {
+    boxShadow:"0 0 20px #3b3930, 0 0 40px #00ff48",
+    duration:1.5,
+    repeat:-1,
+    yoyo:true,
+    ease:"sine.inOut"
+});
+</script>
 
 
 </body>
