@@ -385,8 +385,6 @@ form input,form textarea{
     text-align:center;
 }
 
-
-
 .tools-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
