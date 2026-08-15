@@ -3,236 +3,670 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MISHAL</title>
+    <title>MISHAL | Portfolio</title>
     <link rel="shortcut icon" href="images/logo3.jpg" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Third-Party Libraries -->
     <script src="https://kit.fontawesome.com/263182a5a4.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
+
+    <!-- Motion Background Elements -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- ---------------------- Header / Hero Section -------------------- -->
     <div id="header">
         <div class="container">
-            <nav>
+            <nav id="navbar">
                 <h3 class="mishal"><span class="ftl">M</span>ishal</h3>
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
+                
+                <div class="nav-controls">
+                    <!-- Interactive Theme Variety Switcher -->
+                    <div class="theme-switcher">
+                        <button class="theme-btn" id="theme-toggle" title="Theme Palette Switcher">
+                            <i class="fa-solid fa-palette"></i>
+                        </button>
+                        <div class="theme-options">
+                            <span class="theme-dot theme-yellow active" onclick="setTheme('yellow')" title="Vibrant Gold"></span>
+                            <span class="theme-dot theme-cyan" onclick="setTheme('cyan')" title="Cyber Cyan"></span>
+                            <span class="theme-dot theme-violet" onclick="setTheme('violet')" title="Neon Violet"></span>
+                            <span class="theme-dot theme-emerald" onclick="setTheme('emerald')" title="Emerald Mint"></span>
+                        </div>
+                    </div>
+
+                    <ul id="sidemenu">
+                        <li><a href="#header" class="nav-link active">Home</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#services" class="nav-link">Services</a></li>
+                        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </div>
             </nav>
-            <div class="text-header">
-                <p>Front-End Developer</p>
-                <h1>Hi,Iam Mohammed <br> <span>Mishal</span> .M</h1>
-            </div>
-        </div>
-    </div>
-<!-- ----------------------about-------------------- -->
-   <div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/mishalimage1.png" >
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title" >About me</h1>
-                <p>
-    Hello! I'm <strong>Mishal</strong>, a passionate web developer based in India. I specialize in creating modern, responsive websites using Angular, HTML, CSS, and JavaScript.
-  I’ve worked on various projects ranging from landing pages to dynamic web applications. I enjoy solving problems and turning ideas into real-world solutions.
-  I'm always eager to learn new technologies and improve my skills. I love clean code, minimal UI design, and performance optimization.
-  <strong>Technologies I work with:</strong> Angular, TypeScript, Bootstrap, Git, Firebase.
-  Outside of coding, I enjoy photography, gaming,playing football and exploring tech gadgets.</p>
-        
-        <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
-        </div>
-
-            <div class="tab-component active-tab" id="skills" >
-                <ul>
-                   <li>Angular</li>
-                   <li>HTML5,CSS & Tailwind CSS</li>
-                   <li>JavaScript / TypeScript</li>
-                   <li>Bootstrap</li>
-                   <li>Git & GitHub</li>
-                   <li>Responsive Web Design</li>
-                   
-                </ul>
-            </div>
-            <div class="tab-component" id="experience">
-                <ul>
-                   <li><span>2025 May-July</span><br>Front-End Development using Angular. <br>EM.MINCETECH ,KINFRA TECHNO PARK,Kakkanchery </li>
-                   <li><span>2024 Aug- 2025 Feb</span><br>CHARITY Mobile Application <br> usning Python(Django),Flutter. <br>REGIONAL TECHNOLOGIES,Calicut</li>
-                   
-                </ul>
-            </div>
-            <div class="tab-component" id="education">
-                <ul>
-                   <li><span>2022-2025</span><br>BCA ,ISS Arts & Science College Perinthalmanna </li>
-                   <li><span>2020-2022</span><br>Higher Secondary Education (Computer Science), THSS Angadippuram</li>
-                   <li><span>2019-2020</span><br>SSLC ,AMHSS Thirurkkad</li>
-                </ul>
-            </div>
+            
+            <div class="header-row">
+                <div class="header-col-1 text-header">
+                    <h1 id="typing-h1"></h1>
+                    <p id="typing-text"></p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn1 magnetic-btn">Get In Touch</a>
+                        <a href="CV.pdf" download class="btn2 magnetic-btn">Download CV</a>
+                    </div>
+                </div>
+                
+                <div class="header-col-2">
+                    <div class="hero-frame-container">
+                        <img src="images/backgroundmishal.png" alt="Mohammed Mishal" class="hero-profile-img">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-   </div>
-<!-- --------------------------servives--------------------------- -->
+    <!-- ---------------------- About Section -------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/mishalimage1.png" alt="Mishal Profile">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>
+                        Hello! I'm <strong>Mishal</strong>, a passionate web developer based in India. I specialize in creating modern, responsive websites using Angular, HTML, CSS, and JavaScript.
+                        I’ve worked on various projects ranging from landing pages to dynamic web applications. I enjoy solving problems and turning ideas into real-world solutions.
+                        I'm always eager to learn new technologies and improve my skills. I love clean code, minimal UI design, and performance optimization.
+                        <br><br>
+                        <strong>Technologies I work with:</strong> Angular, TypeScript, Bootstrap, Git, Firebase.
+                        Outside of coding, I enjoy photography, gaming, playing football and exploring tech gadgets.
+                    </p>
+            
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                    </div>
 
-
-   <div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Development</h2>
-                <p>I build responsive and modern websites using Angular, HTML, CSS, and TypeScript. </p>
-                <a href="#" >Learn more</a>
-            </div>
-             <div>
-                <i class="fa-solid fa-crop-simple"></i>
-                <h2>UI/UX Design</h2>
-                <p>I design clean, user-friendly interfaces with attention to usability and accessibility. </p>
-                <a href="#">Learn more</a>
-            </div>
-             <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h2>App Design</h2>
-                <p>I design clean, modern, and user-friendly mobile app interfaces using UI/UX principles. I focus on intuitive layouts, smooth user flows, and consistent visual design </p>
-                <a href="#">Learn more</a>
+                    <div class="tab-component active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend:</span> Angular, HTML5, CSS3, Tailwind CSS</li>
+                            <li><span>Languages:</span> JavaScript / TypeScript, C, Java, Python</li>
+                            <li><span>Frameworks & UI:</span> Bootstrap, Flutter</li>
+                            <li><span>Tools & Version Control:</span> Git & GitHub</li>
+                            <li><span>Principles:</span> Responsive Web Design, Minimal UI/UX</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-component" id="experience">
+                        <ul>
+                            <li><span>2025 May - July</span><br>Front-End Development using Angular.<br>EM.MINCETECH, KINFRA TECHNO PARK, Kakkanchery</li>
+                            <li><span>2024 Aug - 2025 Feb</span><br>CHARITY Mobile Application<br>using Python (Django), Flutter.<br>REGIONAL TECHNOLOGIES, Calicut</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-component" id="education">
+                        <ul>
+                            <li><span>2025 - 2027</span><br>MCA, APJ Abdul Kalam Technological University (KTU), Thiruvananthapuram</li>
+                            <li><span>2022 - 2025</span><br>BCA, ISS Arts & Science College Perinthalmanna</li>
+                            <li><span>2020 - 2022</span><br>Higher Secondary Education (Computer Science), THSS Angadippuram</li>
+                            <li><span>2019 - 2020</span><br>SSLC, AMHSS Thirurkkad</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-   </div>
+    <!-- --------------------------- Tech Stack Section (Super Animated) -------------------- -->
+    <div id="Tech-stack">
+        <div class="container">
+            <h1 class="sub-title" style="text-align: center; margin-bottom: 20px;">🛠 Tech Stack</h1>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <span class="tool-label">HTML5</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="tool-icon" alt="HTML5">
+                </div>
+                <div class="tool-card">
+                    <span class="tool-label">CSS3</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="tool-icon" alt="CSS3">
+                </div>
+                <div class="tool-card">
+                    <span class="tool-label">JavaScript</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="tool-icon" alt="JavaScript">
+                </div>
+                <div class="tool-card">
+                    <span class="tool-label">C Language</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="tool-icon" alt="C">
+                </div>
+                <div class="tool-card">
+                    <span class="tool-label">Angular</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" class="tool-icon" alt="Angular">
+                </div>
+                <div class="tool-card">
+                    <span class="tool-label">Firebase</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="tool-icon" alt="Firebase">
+                </div>
+                <div class="tool-card">
+                    <span class="tool-label">Java</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="tool-icon" alt="Java">
+                </div>
+                <div class="tool-card">
+                    <span class="tool-label">Laravel</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" class="tool-icon" alt="Laravel">
+                </div>
+                <div class="tool-card">
+                    <span class="tool-label">Python</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="tool-icon" alt="Python">
+                </div>
+                <div class="tool-card">
+                    <span class="tool-label">Git & GitHub</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="tool-icon" alt="Git">
+                </div>
+                <div class="tool-card">
+                    <span class="tool-label">Bootstrap</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="tool-icon" alt="Bootstrap">
+                </div>
+                <div class="tool-card">
+                    <span class="tool-label">Flutter</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="tool-icon" alt="Flutter">
+                </div>
+            </div>
+        </div>
+    </div>
 
-   <!-- ----------------------portfolio------------------- -->
+    <!-- -------------------------- Services Section --------------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>I build responsive and modern websites using Angular, HTML, CSS, and TypeScript with pixel-perfect layouts and fast loading speed.</p>
+                    <a href="#contact">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>I design clean, user-friendly interfaces focusing on simplicity, intuitive user flows, and modern aesthetic standards.</p>
+                    <a href="#contact">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>I create modern and intuitive mobile application interfaces using Flutter & UI/UX principles for iOS and Android platforms.</p>
+                    <a href="#contact">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-   <div id="portfolio">
-
-     <div class="container">
-          <h2 class="sub-title">My Work</h2>
+    <!-- ---------------------- Portfolio / Work Section ------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h2 class="sub-title">My Work</h2>
             <div class="work-list">
                 <div class="work">
-                    <img src="images/work1.jpg">
+                    <img src="images/work1.jpg" alt="Angular Portfolio">
                     <div class="layer">
                         <h3>Angular Portfolio Website</h3>
-                         <p>A responsive personal portfolio built with Angular 20, TypeScript.</p>
-                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p>A responsive personal portfolio built with Angular 20, TypeScript, and modern SCSS animations.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                  <div class="work">
-                    <img src="images/work2.jpg">
+                <div class="work">
+                    <img src="images/work2.jpg" alt="E-Commerce Website">
                     <div class="layer">
                         <h3>E-Commerce Website</h3>
-                    <p>Responsive HTML,CSS,JavaScript frontend with cart, login, and Firebase backend.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p>Responsive HTML, CSS, JavaScript frontend with dynamic shopping cart and Firebase backend authentication.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                  <div class="work">
-                    <img src="images/work4.jpg">
+                <div class="work">
+                    <img src="images/work4.jpg" alt="Charity App">
                     <div class="layer">
                         <h3>Charity Mobile App</h3>
-                        <p>A cross-platform Flutter application that helps users find NGOs, donate securely, track donation history, and support social causes directly from their smartphones.</p>
+                        <p>A cross-platform Flutter application helping users locate NGOs, donate securely, and track donation histories.</p>
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-     </div>
-
-
-   </div>
-
-   <!-- -----------------------------contact------------------------- -->
-
-      <div id="contact">
+    <!-- ----------------------------- Contact Section ------------------------- -->
+    <div id="contact">
         <div class="container">
-           <div class="row">
-            <div class="contact-left">
-                <h2 class="sub-title">Contact Me</h2>
-                <p><i class="fa-solid fa-envelope"></i>mishalmalayil2003@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i>+91 9995683020</p>
-                <div class="social-icons">
-                    <a href="https://instagram.com/_mi_shal___"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=100069007091454"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://web.telegram.org/k/#@mishalmalayil"><i class="fa-brands fa-telegram"></i></a>
+            <div class="row">
+                <div class="contact-left">
+                    <h2 class="sub-title">Contact Me</h2>
+                    <p><i class="fa-solid fa-envelope"></i>mishalmalayil2003@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+91 9995683020</p>
                     
-                    <a href="https://wa.me/+919995683020"><i class="fa-brands fa-whatsapp"></i></a>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/_mi_shal___" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100069007091454" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://web.telegram.org/k/#@mishalmalayil" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://wa.me/+919995683020" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/mohammed-mishal-m-41b4aa375" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    
+                    <a href="CV.pdf" download class="btn1 magnetic-btn">Download CV</a>
                 </div>
-                <a href="CV.pdf" download class="btn1">Download CV</a>
+                
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn2 magnetic-btn">Submit Message</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
             </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-           </div>
         </div>
-        
-      </div>
-      <div class="copy-right">
-            <p>©COPYRIGHTS.ALL RIGHTS RESERVED </p><br>
-            <p>Designed by <b> Mishal</b></p>
-        </div>
+    </div>
 
+    <!-- Footer -->
+    <div class="copy-right">
+        <p>© COPYRIGHTS. ALL RIGHTS RESERVED</p><br>
+        <p>Designed by <b>Mishal</b></p>
+    </div>
 
-   <script>
-    var tablinks=document.getElementsByClassName("tab-links");
-    var tabcomponents=document.getElementsByClassName("tab-component");
-        function opentab(tabname){
-            for(tablink of tablinks){
+    <!-- ------------------ Inline Scripts & Animations ------------------ -->
+    
+    <!-- Motion Background Interactive Canvas Engine -->
+    <script>
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let width, height;
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.7;
+                this.vy = (Math.random() - 0.5) * 0.7;
+                this.radius = Math.random() * 2 + 1;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+            draw(accentRGB) {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${accentRGB}, 0.65)`;
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = `rgba(${accentRGB}, 0.8)`;
+                ctx.fill();
+            }
+        }
+
+        const particles = Array.from({ length: 45 }, () => new Particle());
+
+        function getAccentRGB() {
+            const style = getComputedStyle(document.documentElement);
+            const colorHex = style.getPropertyValue('--accent-color').trim();
+            if (colorHex === '#00f2fe') return '0, 242, 254';
+            if (colorHex === '#c084fc') return '192, 132, 252';
+            if (colorHex === '#34d399') return '52, 211, 153';
+            return '255, 219, 59'; // default yellow
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, width, height);
+            const rgb = getAccentRGB();
+
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw(rgb);
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 130) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(${rgb}, ${0.25 * (1 - dist / 130)})`;
+                        ctx.lineWidth = 0.8;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
+    </script>
+
+    <!-- Theme Switcher Variety Script -->
+    <script>
+        function setTheme(themeName) {
+            document.documentElement.setAttribute('data-theme', themeName);
+            localStorage.setItem('user_theme', themeName);
+            
+            const dots = document.querySelectorAll('.theme-dot');
+            dots.forEach(dot => dot.classList.remove('active'));
+            const activeDot = document.querySelector(`.theme-dot.theme-${themeName}`);
+            if (activeDot) activeDot.classList.add('active');
+        }
+
+        // Initialize saved theme or default yellow
+        const savedTheme = localStorage.getItem('user_theme') || 'yellow';
+        setTheme(savedTheme);
+    </script>
+
+    <!-- Touch-Friendly Tab Switching Script -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcomponents = document.getElementsByClassName("tab-component");
+
+        function opentab(evt, tabname) {
+            for (let tablink of tablinks) {
                 tablink.classList.remove("active-link");
             }
-            for(tabcomponent of tabcomponents){
+            for (let tabcomponent of tabcomponents) {
                 tabcomponent.classList.remove("active-tab");
             }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+            if (evt && evt.currentTarget) {
+                evt.currentTarget.classList.add("active-link");
+            }
+            const targetTab = document.getElementById(tabname);
+            if (targetTab) {
+                targetTab.classList.add("active-tab");
+            }
         }
-   </script>
+    </script>
 
-   <script>
-     var sidemen =document.getElementById("sidemenu");
+    <!-- Mobile Drawer Menu Script -->
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
         
-     function openmenu(){
-        sidemen.style.right=0;
-     }
-      function closemenu(){
-        sidemen.style.right= "-200px";
-     }
-     
-     </script>
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-240px";
+        }
 
-   <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzb1JI0sJvHxT8HoqLu4w7TLQWfoESAFBt5yeBmt5ECae4apecP6C184x7rxQkzxfKz/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg= document.getElementById("msg")
+        var navLinks = document.querySelectorAll("#sidemenu a");
+        navLinks.forEach(function(link) {
+            link.addEventListener("click", function() {
+                sidemenu.style.right = "-240px";
+            });
+        });
+    </script>
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML= "Message send successfully"
-        setTimeout(function(){
-            msg.innerHTML=""
-        },3000)
-          form.reset()
-        
-      }  )
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
+    <!-- Google Sheet Form Submission Script -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzb1JI0sJvHxT8HoqLu4w7TLQWfoESAFBt5yeBmt5ECae4apecP6C184x7rxQkzxfKz/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
 
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "✓ Message sent successfully!";
+                    setTimeout(function(){
+                        msg.innerHTML = "";
+                    }, 4000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
 
+    <!-- Typed.js Headline Script -->
+    <script>
+        var typedH1 = new Typed("#typing-h1", {
+            strings: ["Hi, I am Mohammed <br> <span>Mishal</span> .M"],
+            typeSpeed: 50,
+            showCursor: false,
+            loop: false,
+            smartBackspace: false,
+            contentType: "html"
+        });
+
+        typedH1.options.onComplete = function() {
+            document.getElementById("typing-text").style.display = "inline-block";
+            new Typed("#typing-text", {
+                strings: ["MCA Student..", "Software Developer", "Web Designer"],
+                typeSpeed: 60,
+                backSpeed: 40,
+                backDelay: 1500,
+                loop: true
+            });
+        };
+    </script>
+
+    <!-- Custom Cursor Follower & Hover Script -->
+    <script>
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorOutline = document.getElementById('cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 400, fill: "forwards" });
+        });
+
+        const interactiveElements = document.querySelectorAll('a, button, .tool-icon, .work, .services-list div, .tab-links, .theme-dot');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+            el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+    </script>
+
+    <!-- Magnetic Buttons Effect -->
+    <script>
+        const magneticBtns = document.querySelectorAll('.magnetic-btn, .social-icons a');
+        magneticBtns.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0px, 0px)';
+            });
+        });
+    </script>
+
+    <!-- 3D Tilt & Magnetic Physics for Tech Cards -->
+    <script>
+        const toolCards = document.querySelectorAll('.tool-card');
+        toolCards.forEach(card => {
+            const icon = card.querySelector('.tool-icon');
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                icon.style.transform = `perspective(500px) rotateX(${-y * 0.45}deg) rotateY(${x * 0.45}deg) scale(1.18) translateY(-10px)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                icon.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg) scale(1) translateY(0px)';
+            });
+        });
+    </script>
+
+    <!-- GSAP ScrollTrigger Animations Suite -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!isReducedMotion) {
+            // 1. Hero Entrance Animations
+            gsap.from("nav .mishal", { duration: 1, y: -30, opacity: 0, ease: "power3.out" });
+            gsap.from("nav ul li", { duration: 0.8, y: -20, opacity: 0, stagger: 0.1, ease: "power3.out" });
+            gsap.from(".hero-cta .btn1, .hero-cta .btn2", { duration: 1, y: 30, opacity: 0, stagger: 0.2, ease: "power3.out", delay: 0.5 });
+            gsap.from(".hero-frame-container", { duration: 1.2, x: 60, opacity: 0, ease: "power3.out", delay: 0.3 });
+
+            // 2. About Section Reveal
+            gsap.from(".about-col-1 img", {
+                scrollTrigger: { trigger: "#about", start: "top 75%" },
+                scale: 0.85,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power3.out"
+            });
+
+            gsap.from(".about-col-2 .sub-title, .about-col-2 p", {
+                scrollTrigger: { trigger: "#about", start: "top 75%" },
+                y: 40,
+                opacity: 0,
+                stagger: 0.2,
+                duration: 1,
+                ease: "power3.out"
+            });
+
+            gsap.from(".tab-titles .tab-links", {
+                scrollTrigger: { trigger: ".tab-titles", start: "top 85%" },
+                y: 20,
+                opacity: 0,
+                stagger: 0.15,
+                duration: 0.8,
+                ease: "power3.out"
+            });
+
+            // 3. Tech Stack Staggered Entrance (Super Wave Grid Reveal)
+            gsap.from(".tool-card", {
+                scrollTrigger: { trigger: "#Tech-stack", start: "top 80%" },
+                opacity: 0,
+                scale: 0.3,
+                y: 70,
+                rotation: -20,
+                stagger: {
+                    amount: 0.9,
+                    grid: [3, 4],
+                    from: "center"
+                },
+                duration: 1.2,
+                ease: "back.out(2)"
+            });
+
+            // 4. Services Section Staggered Reveal
+            gsap.from("#services .sub-title", {
+                scrollTrigger: { trigger: "#services", start: "top 80%" },
+                y: 30,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power3.out"
+            });
+
+            gsap.from(".services-list div", {
+                scrollTrigger: { trigger: ".services-list", start: "top 80%" },
+                opacity: 0,
+                y: 50,
+                stagger: 0.2,
+                duration: 0.9,
+                ease: "power3.out"
+            });
+
+            // 5. Portfolio Section Reveal
+            gsap.from("#portfolio .sub-title", {
+                scrollTrigger: { trigger: "#portfolio", start: "top 80%" },
+                y: 30,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power3.out"
+            });
+
+            gsap.from(".work-list .work", {
+                scrollTrigger: { trigger: ".work-list", start: "top 80%" },
+                opacity: 0,
+                y: 60,
+                scale: 0.95,
+                stagger: 0.2,
+                duration: 1,
+                ease: "power3.out"
+            });
+
+            // 6. Contact Section Reveal
+            gsap.from(".contact-left .sub-title, .contact-left p, .contact-left .social-icons, .contact-left .btn1", {
+                scrollTrigger: { trigger: "#contact", start: "top 80%" },
+                opacity: 0,
+                y: 40,
+                stagger: 0.15,
+                duration: 0.9,
+                ease: "power3.out"
+            });
+
+            gsap.from(".contact-right form input, .contact-right form textarea, .contact-right form button", {
+                scrollTrigger: { trigger: ".contact-right", start: "top 80%" },
+                opacity: 0,
+                x: 40,
+                stagger: 0.15,
+                duration: 0.9,
+                ease: "power3.out"
+            });
+        }
+    </script>
+
+    <!-- Active Navigation Link Highlighter on Scroll -->
+    <script>
+        const sections = document.querySelectorAll("div[id]");
+        const navLiLinks = document.querySelectorAll("nav ul li a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 120;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLiLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${current}`) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
