@@ -213,9 +213,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+<<<<<<< HEAD
     padding: 20px 0;
     position: relative;
     z-index: 100;
+=======
+    flex-wrap: wrap;
+
+>>>>>>> 3017a9c213f365c2a897e62b7e45e9c973a06958
 }
 
 .nav-controls {
@@ -335,10 +340,88 @@ nav ul li a.active::after {
     width: 100%;
 }
 
+<<<<<<< HEAD
 /* ------------------ Header / Hero Section ------------------ */
 #header {
     width: 100%;
     min-height: 100vh;
+=======
+.mishal{
+    animation: flip 3s linear;
+    
+}
+@keyframes flip{
+    50%{
+        transform: rotateY(180deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+.text-header{
+    margin-top: 20%;
+    font-size: 30px;    
+}
+
+ 
+
+#typing-h1 {
+            color: white;
+            font-size: 60px;
+        }
+
+        #typing-h1 span {
+            color: yellow;  /* Mishal color */
+        }
+
+        
+
+        #typing-text {
+            display: none;
+            color: white;
+            font-size: 30px;
+        }
+
+
+/* ------------------about--------------- */
+#about{
+    padding:80px 0;
+    color: #ababab;
+}
+.about-col-1 img{
+    width: 322px;
+    height: 92vh;
+    border-radius: 15px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-2{
+    flex-basis: 55%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+    
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+>>>>>>> 3017a9c213f365c2a897e62b7e45e9c973a06958
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1076,6 +1159,39 @@ form input:focus, form textarea:focus {
     border-top: 1px solid var(--border-subtle);
     margin-top: 50px;
 }
+#tools{
+    padding:120px 0;
+    text-align:center;
+}
+
+.tools-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+    gap:40px;
+    max-width:800px;
+    margin:auto;
+    padding: 10px 10%;
+}
+
+.tool-icon{
+    width:80px;
+    padding:18px;
+    border-radius:20px;
+    background:#111827;
+    transition:0.3s ease;
+}
+.tools-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr); /* Desktop 4 columns */
+    gap:40px;
+    max-width:900px;
+    margin:auto;
+}
+.sub-titles{
+    font-size: 40px;
+    ;
+    
+}
 
 .copy-right p {
     color: var(--text-muted);
@@ -1101,6 +1217,7 @@ nav .fas {
         width: 340px;
         height: 410px;
     }
+<<<<<<< HEAD
 }
 
 @media (max-width: 992px) {
@@ -1111,6 +1228,10 @@ nav .fas {
         padding-top: 30px;
         padding-bottom: 60px;
         gap: 30px;
+=======
+    #typing-h1{
+        font-size: 35px;
+>>>>>>> 3017a9c213f365c2a897e62b7e45e9c973a06958
     }
 
     .header-col-1, .header-col-2 {
@@ -1275,4 +1396,33 @@ nav .fas {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+@media (max-width:992px){
+    .tools-grid{
+        grid-template-columns:repeat(3, 1fr);
+        gap:30px;
+        
+    }
+}
+/* Mobile */
+@media (max-width:600px){
+
+    .tools-grid{
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap:20px;
+        padding:5px 25%;
+        
+    }
+
+    .tool-icon{
+        width:50px;      /* smaller icon */
+        padding:12px;
+        border-radius:15px;
+    }
+
+    .sub-title{
+        font-size:28px;
+        margin-bottom:40px;
+    }
+
 }
