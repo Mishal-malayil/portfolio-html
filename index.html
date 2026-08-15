@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,12 +21,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
-
-    <!-- Motion Background Elements -->
+    <!-- Full-Screen Interactive Motion Background Canvas -->
     <canvas id="bg-canvas"></canvas>
-    <div class="ambient-orb orb-1"></div>
-    <div class="ambient-orb orb-2"></div>
-    <div class="ambient-orb orb-3"></div>
 
     <!-- Custom Cursor -->
     <div class="cursor-dot" id="cursor-dot"></div>
@@ -64,7 +59,6 @@
                     <i class="fas fa-bars" onclick="openmenu()"></i>
                 </div>
             </nav>
-<<<<<<< HEAD:mishal.html
             
             <div class="header-row">
                 <div class="header-col-1 text-header">
@@ -81,74 +75,19 @@
                         <img src="images/backgroundmishal.png" alt="Mohammed Mishal" class="hero-profile-img">
                     </div>
                 </div>
-=======
-            <div class="text-header">
-                <h1 id="typing-h1"></h1>
-                <p id="typing-text"></p>
-                
-            </div>
-        </div>
-    </div>
-<!-- ----------------------about-------------------- -->
-   <div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/mishalimage1.png" >
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title" >About me</h1>
-                <p>
-    Hello! I'm <strong>Mishal</strong>, MCA Student and passionate web developer based in India. I specialize in creating modern, responsive websites using Angular, HTML, CSS, and JavaScript.
-  I’ve worked on various projects ranging from landing pages to dynamic web applications. I enjoy solving problems and turning ideas into real-world solutions.
-  I'm always eager to learn new technologies and improve my skills. I love clean code, minimal UI design, and performance optimization.
-  <strong>Technologies I work with:</strong> Angular, TypeScript, Bootstrap, Git, Firebase.
-  Outside of coding, I enjoy photography, gaming,playing football and exploring tech gadgets.</p>
-        
-        <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
-        </div>
-
-            <div class="tab-component active-tab" id="skills" >
-                <ul>
-                   <li>Angular</li>
-                   <li>HTML5,CSS & Tailwind CSS</li>
-                   <li>Php / MySQL / Python</li>
-                   <li>JavaScript / TypeScript</li>
-                   <li>Bootstrap</li>
-                   <li>Git & GitHub</li>
-                   <li>Responsive Web Design</li>
-                   
-                </ul>
-            </div>
-            <div class="tab-component" id="experience">
-                <ul>
-                   <li><span>2025 May-July</span><br>Front-End Development using Angular. <br>EM.MINCETECH ,KINFRA TECHNO PARK,Kakkanchery </li>
-                   <li><span>2024 Aug- 2025 Feb</span><br>CHARITY Mobile Application <br> usning Python(Django),Flutter. <br>REGIONAL TECHNOLOGIES,Calicut</li>
-                   
-                </ul>
-            </div>
-            <div class="tab-component" id="education">
-                <ul>
-                   <li><span>2022-2025</span><br>BCA ,ISS Arts & Science College Perinthalmanna </li>
-                   <li><span>2020-2022</span><br>Higher Secondary Education (Computer Science), THSS Angadippuram</li>
-                   <li><span>2019-2020</span><br>SSLC ,AMHSS Thirurkkad</li>
-                </ul>
-            </div>
->>>>>>> 3017a9c213f365c2a897e62b7e45e9c973a06958:index.html
             </div>
         </div>
     </div>
 
-<<<<<<< HEAD:mishal.html
     <!-- ---------------------- About Section -------------------- -->
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/mishalimage1.png" alt="Mishal Profile">
+                    <div class="about-img-frame" id="about-img-frame">
+                        <div class="about-ring-glow"></div>
+                        <img src="images/mishalimage1.png" alt="Mishal Profile" class="about-profile-img">
+                    </div>
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About me</h1>
@@ -166,51 +105,6 @@
                         <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
                         <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
                     </div>
-=======
-   </div>
-
-
-<!---------------------------Tech Stack---------------------------------------> 
-<div id="Tech-stack">
-    
-<h1 class="sub-title" style="text-align: center; margin-bottom: 60px;">🛠 Tech Stack</h1>
-
-<div class="tools-grid">
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="tool-icon">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="tool-icon">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="tool-icon">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="tool-icon">
-
-<!-- Angular -->
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" class="tool-icon">
-
-<!-- Firebase -->
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="tool-icon">
-
-<!-- Java -->
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="tool-icon">
-
-<!-- Laravel -->
- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" class="tool-icon" alt="Laravel">
-
-<!-- Python -->
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="tool-icon">
-
-<!-- Git -->
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="tool-icon">
-
-<!-- Bootstrap -->
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="tool-icon">
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="tool-icon" alt="Flutter">
-</div>
-</div>
-</div>
-
-    
-<!-- --------------------------servives--------------------------- -->
->>>>>>> 3017a9c213f365c2a897e62b7e45e9c973a06958:index.html
 
                     <div class="tab-component active-tab" id="skills">
                         <ul>
@@ -232,9 +126,9 @@
                     <div class="tab-component" id="education">
                         <ul>
                             <li><span>2025 - 2027</span><br>MCA, APJ Abdul Kalam Technological University (KTU), Thiruvananthapuram</li>
-                            <li><span>2022 - 2025</span><br>BCA, ISS Arts & Science College Perinthalmanna</li>
-                            <li><span>2020 - 2022</span><br>Higher Secondary Education (Computer Science), THSS Angadippuram</li>
-                            <li><span>2019 - 2020</span><br>SSLC, AMHSS Thirurkkad</li>
+                            <li><span>2022 - 2025</span><br>BCA, University of Calicut</li>
+                            <li><span>2020 - 2022</span><br>Higher Secondary Education (Computer Science)</li>
+                            <li><span>2019 - 2020</span><br>SSLC</li>
                         </ul>
                     </div>
                 </div>
@@ -363,7 +257,6 @@
     <!-- ----------------------------- Contact Section ------------------------- -->
     <div id="contact">
         <div class="container">
-<<<<<<< HEAD:mishal.html
             <div class="row">
                 <div class="contact-left">
                     <h2 class="sub-title">Contact Me</h2>
@@ -389,20 +282,6 @@
                         <button type="submit" class="btn2 magnetic-btn">Submit Message</button>
                     </form>
                     <span id="msg"></span>
-=======
-           <div class="row">
-            <div class="contact-left">
-                <h2 class="sub-title">Contact Me</h2>
-                <p><i class="fa-solid fa-envelope"></i>mishalmalayil2003@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i>+91 9995683020</p>
-                <div class="social-icons">
-                    <a href="https://instagram.com/_mi_shal___"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=100069007091454"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://web.telegram.org/k/#@mishalmalayil"><i class="fa-brands fa-telegram"></i></a>
-                    <a href="https://wa.me/+919995683020"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/mohammed-mishal-m-41b4aa375"><i class="fa-brands fa-linkedin"></i></a>
-
->>>>>>> 3017a9c213f365c2a897e62b7e45e9c973a06958:index.html
                 </div>
             </div>
         </div>
@@ -416,82 +295,6 @@
 
     <!-- ------------------ Inline Scripts & Animations ------------------ -->
     
-    <!-- Motion Background Interactive Canvas Engine -->
-    <script>
-        const canvas = document.getElementById('bg-canvas');
-        const ctx = canvas.getContext('2d');
-
-        let width, height;
-        function resizeCanvas() {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * width;
-                this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * 0.7;
-                this.vy = (Math.random() - 0.5) * 0.7;
-                this.radius = Math.random() * 2 + 1;
-            }
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-                if (this.x < 0 || this.x > width) this.vx *= -1;
-                if (this.y < 0 || this.y > height) this.vy *= -1;
-            }
-            draw(accentRGB) {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(${accentRGB}, 0.65)`;
-                ctx.shadowBlur = 8;
-                ctx.shadowColor = `rgba(${accentRGB}, 0.8)`;
-                ctx.fill();
-            }
-        }
-
-        const particles = Array.from({ length: 45 }, () => new Particle());
-
-        function getAccentRGB() {
-            const style = getComputedStyle(document.documentElement);
-            const colorHex = style.getPropertyValue('--accent-color').trim();
-            if (colorHex === '#00f2fe') return '0, 242, 254';
-            if (colorHex === '#c084fc') return '192, 132, 252';
-            if (colorHex === '#34d399') return '52, 211, 153';
-            return '255, 219, 59'; // default yellow
-        }
-
-        function animateCanvas() {
-            ctx.clearRect(0, 0, width, height);
-            const rgb = getAccentRGB();
-
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw(rgb);
-
-                for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-
-                    if (dist < 130) {
-                        ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = `rgba(${rgb}, ${0.25 * (1 - dist / 130)})`;
-                        ctx.lineWidth = 0.8;
-                        ctx.stroke();
-                    }
-                }
-            }
-            requestAnimationFrame(animateCanvas);
-        }
-        animateCanvas();
-    </script>
-
     <!-- Theme Switcher Variety Script -->
     <script>
         function setTheme(themeName) {
@@ -502,6 +305,10 @@
             dots.forEach(dot => dot.classList.remove('active'));
             const activeDot = document.querySelector(`.theme-dot.theme-${themeName}`);
             if (activeDot) activeDot.classList.add('active');
+
+            if (window.updateCanvasTheme) {
+                window.updateCanvasTheme();
+            }
         }
 
         // Initialize saved theme or default yellow
@@ -535,30 +342,12 @@
     <script>
         var sidemenu = document.getElementById("sidemenu");
         
-<<<<<<< HEAD:mishal.html
         function openmenu() {
             sidemenu.style.right = "0";
         }
         function closemenu() {
             sidemenu.style.right = "-240px";
         }
-=======
-     function openmenu(){
-        sidemen.style.right=0;
-     }
-      function closemenu(){
-        sidemen.style.right= "-200px";
-     }
-       var navLinks = document.querySelectorAll("#sidemenu a");
-
-    navLinks.forEach(function(link) {
-        link.addEventListener("click", function() {
-            sidemenu.style.right = "-200px";
-        });
-    });
-     
-     </script>
->>>>>>> 3017a9c213f365c2a897e62b7e45e9c973a06958:index.html
 
         var navLinks = document.querySelectorAll("#sidemenu a");
         navLinks.forEach(function(link) {
@@ -574,7 +363,6 @@
         const form = document.forms['submit-to-google-sheet'];
         const msg = document.getElementById("msg");
 
-<<<<<<< HEAD:mishal.html
         form.addEventListener('submit', e => {
             e.preventDefault();
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
@@ -588,60 +376,6 @@
                 .catch(error => console.error('Error!', error.message));
         });
     </script>
-=======
-    <script>
-// Step 1: Type the H1 first
-var typedH1 = new Typed("#typing-h1", {
-    strings: ["Hi, I am Mohammed <br> <span>Mishal</span> .M"],
-    typeSpeed: 50,
-    showCursor: false,
-    loop: false,
-    smartBackspace: false,
-    contentType: "html"  // IMPORTANT for coloring
-});
-
-// Step 2: After H1 completes, start span typing
-typedH1.options.onComplete = function() {
-    document.getElementById("typing-text").style.display = "inline-block";
-
-    new Typed("#typing-text", {
-        strings: ["MCA Student..", "Front-End Developer", "Web Designer"],
-        typeSpeed: 60,
-        backSpeed: 40,
-        backDelay: 1500,
-        loop: true
-    });
-};
-</script>
-
-<script>
-gsap.registerPlugin(ScrollTrigger);
-
-/* ⚡ Full Section Flash Reveal */
-gsap.from(".tool-icon", {
-    scrollTrigger:{
-        trigger:"#tools",
-        start:"top 75%",
-    },
-    opacity:0,
-    scale:0.5,
-    filter:"blur(25px)",
-    duration:1,
-    ease:"power3.out"
-});
-
-/* 🌈 Continuous RGB Glow (All Together) */
-gsap.to(".tool-icon", {
-    boxShadow:"0 0 10px #FFFF00
-, 0 0 30px #FFFF00",
-    duration:1.5,
-    repeat:-1,
-    yoyo:true,
-    ease:"sine.inOut"
-});
-</script>
-
->>>>>>> 3017a9c213f365c2a897e62b7e45e9c973a06958:index.html
 
     <!-- Typed.js Headline Script -->
     <script>
@@ -707,7 +441,7 @@ gsap.to(".tool-icon", {
         });
     </script>
 
-    <!-- 3D Tilt & Magnetic Physics for Tech Cards -->
+    <!-- 3D Tilt & Magnetic Physics for Tech Cards & About Photo Frame -->
     <script>
         const toolCards = document.querySelectorAll('.tool-card');
         toolCards.forEach(card => {
@@ -722,6 +456,20 @@ gsap.to(".tool-icon", {
                 icon.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg) scale(1) translateY(0px)';
             });
         });
+
+        // 3D Magnetic Tilt for About Me Photo Frame
+        const aboutFrame = document.getElementById('about-img-frame');
+        if (aboutFrame) {
+            aboutFrame.addEventListener('mousemove', (e) => {
+                const rect = aboutFrame.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                aboutFrame.style.transform = `perspective(800px) rotateX(${-y * 0.15}deg) rotateY(${x * 0.15}deg) scale(1.04) translateY(-10px)`;
+            });
+            aboutFrame.addEventListener('mouseleave', () => {
+                aboutFrame.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale(1) translateY(0px)';
+            });
+        }
     </script>
 
     <!-- GSAP ScrollTrigger Animations Suite -->
@@ -860,6 +608,255 @@ gsap.to(".tool-icon", {
                 }
             });
         });
+    </script>
+    <!-- Super Multi-Variety Motion & Interactive Parallax Canvas Engine -->
+    <script>
+        (function() {
+            const canvas = document.getElementById('bg-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            
+            let width = canvas.width = window.innerWidth;
+            let height = canvas.height = window.innerHeight;
+
+            let mouse = { x: null, y: null, radius: 240 };
+            let accentRGB = { r: 255, g: 219, b: 59 };
+            let wavePhase = 0;
+            let scrollY = window.scrollY;
+
+            function hexToRgb(hex) {
+                hex = hex.trim().replace('#', '');
+                if (hex.length === 3) {
+                    hex = hex.split('').map(c => c + c).join('');
+                }
+                const num = parseInt(hex, 16);
+                return {
+                    r: (num >> 16) & 255,
+                    g: (num >> 8) & 255,
+                    b: num & 255
+                };
+            }
+
+            function updateThemeColors() {
+                const colorHex = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
+                if (colorHex.startsWith('#')) {
+                    accentRGB = hexToRgb(colorHex);
+                }
+            }
+
+            window.updateCanvasTheme = updateThemeColors;
+            updateThemeColors();
+
+            window.addEventListener('resize', () => {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+                initElements();
+            });
+
+            window.addEventListener('scroll', () => {
+                scrollY = window.scrollY;
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+            });
+
+            window.addEventListener('mouseleave', () => {
+                mouse.x = null;
+                mouse.y = null;
+            });
+
+            // Variety Element 1: Floating 3D Wireframe Polyhedrons (Hexagons, Octagons, Triangles)
+            class GeoShape {
+                constructor() {
+                    this.reset();
+                }
+
+                reset() {
+                    this.x = Math.random() * width;
+                    this.y = height + Math.random() * 100;
+                    this.size = Math.random() * 24 + 10;
+                    this.speedY = Math.random() * 0.45 + 0.2;
+                    this.speedX = (Math.random() - 0.5) * 0.3;
+                    this.rotation = Math.random() * Math.PI * 2;
+                    this.rotSpeed = (Math.random() - 0.5) * 0.018;
+                    const shapeTypes = [3, 4, 6, 8];
+                    this.sides = shapeTypes[Math.floor(Math.random() * shapeTypes.length)];
+                    this.alpha = Math.random() * 0.25 + 0.08;
+                }
+
+                update() {
+                    this.y -= this.speedY + (scrollY * 0.0002);
+                    this.x += this.speedX;
+                    this.rotation += this.rotSpeed;
+
+                    if (this.y < -60) {
+                        this.reset();
+                    }
+
+                    // Mouse Proximity Interaction
+                    if (mouse.x !== null && mouse.y !== null) {
+                        const dx = mouse.x - this.x;
+                        const dy = mouse.y - this.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < mouse.radius) {
+                            const force = (mouse.radius - dist) / mouse.radius;
+                            this.x -= (dx / dist) * force * 2.0;
+                            this.y -= (dy / dist) * force * 2.0;
+                        }
+                    }
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.translate(this.x, this.y);
+                    ctx.rotate(this.rotation);
+                    ctx.beginPath();
+
+                    for (let i = 0; i < this.sides; i++) {
+                        const angle = (i * 2 * Math.PI) / this.sides;
+                        const px = Math.cos(angle) * this.size;
+                        const py = Math.sin(angle) * this.size;
+                        if (i === 0) ctx.moveTo(px, py);
+                        else ctx.lineTo(px, py);
+                    }
+                    ctx.closePath();
+
+                    ctx.strokeStyle = `rgba(${accentRGB.r}, ${accentRGB.g}, ${accentRGB.b}, ${this.alpha})`;
+                    ctx.lineWidth = 1.2;
+                    ctx.stroke();
+
+                    // Inner geometric node crosshair
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.size * 0.25, 0, Math.PI * 2);
+                    ctx.strokeStyle = `rgba(${accentRGB.r}, ${accentRGB.g}, ${accentRGB.b}, ${this.alpha * 0.6})`;
+                    ctx.lineWidth = 0.8;
+                    ctx.stroke();
+
+                    ctx.restore();
+                }
+            }
+
+            // Variety Element 2: Floating Micro Stardust Particles with Pulsing Luminance
+            class StarParticle {
+                constructor() {
+                    this.reset();
+                }
+
+                reset() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.radius = Math.random() * 1.8 + 0.6;
+                    this.vx = (Math.random() - 0.5) * 0.35;
+                    this.vy = (Math.random() - 0.5) * 0.35;
+                    this.alpha = Math.random() * 0.5 + 0.15;
+                    this.pulseSpeed = Math.random() * 0.02 + 0.01;
+                    this.pulseAngle = Math.random() * Math.PI * 2;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+
+                    if (this.x < -10) this.x = width + 10;
+                    if (this.x > width + 10) this.x = -10;
+                    if (this.y < -10) this.y = height + 10;
+                    if (this.y > height + 10) this.y = -10;
+
+                    this.pulseAngle += this.pulseSpeed;
+                    this.currentAlpha = this.alpha + Math.sin(this.pulseAngle) * 0.15;
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(${accentRGB.r}, ${accentRGB.g}, ${accentRGB.b}, ${Math.max(0.08, this.currentAlpha)})`;
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = `rgba(${accentRGB.r}, ${accentRGB.g}, ${accentRGB.b}, 0.6)`;
+                    ctx.fill();
+                    ctx.shadowBlur = 0;
+                }
+            }
+
+            let shapes = [];
+            let stars = [];
+
+            function initElements() {
+                shapes = [];
+                stars = [];
+
+                const shapeCount = Math.min(Math.floor(width / 65), 28);
+                for (let i = 0; i < shapeCount; i++) {
+                    const s = new GeoShape();
+                    s.y = Math.random() * height;
+                    shapes.push(s);
+                }
+
+                const starCount = Math.min(Math.floor((width * height) / 28000), 40);
+                for (let i = 0; i < starCount; i++) {
+                    stars.push(new StarParticle());
+                }
+            }
+
+            // Variety Element 3: Multi-Layer Sine Wave Ribbons with Scroll Parallax
+            function drawWaves() {
+                wavePhase += 0.014;
+                const waveLines = [
+                    { yOffset: height * 0.22 + (scrollY * 0.05 % 60), amplitude: 38, frequency: 0.002, speed: 1.0, alpha: 0.14 },
+                    { yOffset: height * 0.52 - (scrollY * 0.08 % 80), amplitude: 55, frequency: 0.0016, speed: 1.3, alpha: 0.16 },
+                    { yOffset: height * 0.78 + (scrollY * 0.04 % 50), amplitude: 42, frequency: 0.0024, speed: 0.9, alpha: 0.13 }
+                ];
+
+                waveLines.forEach((wave, idx) => {
+                    ctx.beginPath();
+                    ctx.moveTo(0, wave.yOffset);
+
+                    for (let x = 0; x <= width; x += 15) {
+                        let y = wave.yOffset + Math.sin(x * wave.frequency + wavePhase * wave.speed + idx) * wave.amplitude;
+                        
+                        // Interactive Mouse Wave Distortion
+                        if (mouse.x !== null && mouse.y !== null) {
+                            const dx = x - mouse.x;
+                            const dy = y - mouse.y;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+                            if (dist < mouse.radius) {
+                                const bend = Math.sin((1 - dist / mouse.radius) * Math.PI) * 50;
+                                y += (dy > 0 ? bend : -bend);
+                            }
+                        }
+
+                        ctx.lineTo(x, y);
+                    }
+
+                    ctx.strokeStyle = `rgba(${accentRGB.r}, ${accentRGB.g}, ${accentRGB.b}, ${wave.alpha})`;
+                    ctx.lineWidth = 1.6;
+                    ctx.stroke();
+                });
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                
+                // Draw variety motion layers
+                drawWaves();
+
+                stars.forEach(st => {
+                    st.update();
+                    st.draw();
+                });
+
+                shapes.forEach(s => {
+                    s.update();
+                    s.draw();
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            initElements();
+            animate();
+        })();
     </script>
 </body>
 </html>
